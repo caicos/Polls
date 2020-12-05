@@ -3,10 +3,11 @@ from django.contrib import admin
 from .models import Question
 
 # Personnalisation de l'affichage et du comportement du formulaire pour le modèle "Question"
-# Cette méthode (de  créer une classe d’administration de modèle, puis le transmettre en tant que deuxième paramètre de admin.site.register())
-# permet de modifier les options d’administration pour un modèle.
-# Le champ « Date de publication » est maintenant affiché avant le champ « Question »
+# on partage le formulaire en plusieurs sous-ensembles (fieldsets). (Le premier élément de chaque tuple dans fieldsets est le titre du groupe de champs.)
 class QuestionAdmin(admin.ModelAdmin):
-    fields = ['pub_date', 'question_text']
+    fieldsets = [
+        (None,               {'fields': ['question_text']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
 
 admin.site.register(Question, QuestionAdmin)
