@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic    # Nous utlisions ici 2 vues génériques : ListView et DetailView.Respectivement, ces deux vues permettent l’abstraction des concepts « afficher une liste d’objets » et « afficher une page détaillée pour un type particulier d’objet ».
 from django.utils import timezone
+from django.utils.translation import gettext as _
 
 
 from .models import Choice, Question
@@ -46,3 +47,13 @@ def vote(request, question_id):
         # always return an HttpResponseRedirect after successfully dealing with POST data.
         # This prevents data from being posted twice if a user hits the back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+def mytranslateview(request):
+    context = {
+        'static_string_1' : 'first static string to translate',
+        'static_string_2' : 'second static string to translate',
+        'second_paragraph' : _('this is a second paragraph to translate'),      # la traduction s'effectue directement dans le code python
+    }
+    return render(request, 'polls/my_translate_template.html', context)
+    # On utilise la fonction "gettext_lazy()" dans une définition de modèle ou de formulaire et "gettext()" dans une vue
+    # En règle générale : Si vous devez appeler la fonction sur une chaîne à un moment où Django ne sait pas encore quelle langue utiliser, utilisez gettext_lazy(). La chaîne ne sera traduite qu’au dernier moment (au moment de son rendu).

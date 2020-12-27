@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -104,11 +105,18 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'fr-FR'
+LANGUAGE_CODE = 'fr-FR'         # Language natif du sie
+
+from django.utils.translation import ugettext_lazy as _
+LANGUAGES = [                   # Languages disponibles
+    ('fr', _("Français")),
+    ('en', _("Englais")),
+    ('de', _("Allemand")),
+]
 
 TIME_ZONE = 'Europe/Paris'
 
-USE_I18N = True
+USE_I18N = True                 # Enable Internationalization
 
 USE_L10N = True
 

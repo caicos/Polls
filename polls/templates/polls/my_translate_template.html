@@ -1,0 +1,18 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page d'essai pour la traduction</title>
+    </head>
+    <body>
+        <h1>{% translate "Translations "%} :</h1>
+        <p>{% blocktranslate %}This is a paragraph to translate with a variable : {{ static_string_1 }}{% endblocktranslate %}</p>
+        <p>{{ second_paragraph }}</p>
+        <ul>
+            <li>{% translate static_string_1 %}</li>
+            <li>{% translate static_string_2 %}</li>
+            <li>{% translate "Third static string to translate" %}</li>
+        </ul>
+    </body>
+</html>
