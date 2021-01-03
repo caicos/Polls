@@ -1,0 +1,13 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page d'essai de traduction</title>
+    </head>
+    <body>
+        {% get_current_language as LANGUAGE_CODE %}
+        <h2>Paramètre langue actuellement actif : {{ LANGUAGE_CODE }}</h2>
+        <h1>{% translate "Essayons de traduire ce texte" %}</h1>
+    </body>
+</html>

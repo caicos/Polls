@@ -25,7 +25,7 @@ SECRET_KEY = 'jq&#&m8!oj#!zw_^m&-vr=9hm8damjndaz2%_o#va)pf3c0a#3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'fr-FR'         # Language natif du sie
+LANGUAGE_CODE = 'fr'         # Language natif du site
 
 from django.utils.translation import ugettext_lazy as _
 LANGUAGES = [                   # Languages disponibles

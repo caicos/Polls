@@ -12,5 +12,7 @@ urlpatterns = [
     #ex: /<language_code/polls/5/vote/
     path('<int:question_id>/vote/', views.vote, name = 'vote'),
     #ex: /<language_code/polls/mytranslate/
-    path('mytranslate/', views.mytranslateview, name = 'mytranslate')
+    path('mytranslate/', views.mytranslateview, name = 'mytranslate'),
+    #ex: /<language_code/polls/essaitraduc/
+    path('essaitraduc/', views.matraduc, name = 'matraduc'),
 ]

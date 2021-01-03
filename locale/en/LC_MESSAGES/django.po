@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-02 16:20+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: mysite/settings.py:112
+msgid "Français"
+msgstr "French"
+
+#: mysite/settings.py:113
+msgid "Englais"
+msgstr "English"
+
+#: mysite/settings.py:114
+msgid "Allemand"
+msgstr "German"
+
+#: polls/templates/polls/Page_essai_traduction.html:9
+#: polls/templates/polls/my_translate_template.html:9
+msgid "Traduction"
+msgstr "Translate"
+
+#: polls/templates/polls/Page_essai_traduction.html:12
+#: polls/templates/polls/my_translate_template.html:12
+#, python-format
+msgid "Ceci est un paragraphe à traduire avec la variable : %(static_string_1)s"
+msgstr "This is a paragraph to translate with a variable : %(static_string_1)s"
+
+#: polls/templates/polls/Page_essai_traduction.html:17
+#: polls/templates/polls/my_translate_template.html:17
+msgid "Troisième phrase statique à traduire"
+msgstr "Third static string to translate"
+
+#: polls/views.py:53
+msgid "Première phrase statique à traduire"
+msgstr "First static string to translate"
+
+#: polls/views.py:54
+msgid "Seconde phrase statique à traduire"
+msgstr "Second static string to translate"
+
+#: polls/views.py:55
+msgid "Ceci est le second paragraphe à traduire"
+msgstr "This is the second paragraph to translate"
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr "Django site admin"
