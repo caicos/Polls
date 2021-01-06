@@ -60,8 +60,8 @@ def mytranslateview(request):
 
 def matraduc(request):
     context = {
-        'static_string_1' : gettext_noop('Première phrase statique à traduire'),
-        'static_string_2' : gettext_noop('Seconde phrase statique à traduire'),
-        'second_paragraph' : _('Ceci est le second paragraphe à traduire'),      # la traduction s'effectue directement dans le code python
+        # 'static_string_1' : gettext_noop('Première phrase statique à traduire'),
+        # 'static_string_2' : gettext_noop('Seconde phrase statique à traduire'),
+        # 'second_paragraph' : _('Ceci est le second paragraphe à traduire'),      # la traduction s'effectue directement dans le code python
     }
     return render(request, 'polls/Page_essai_traduction.html', context)

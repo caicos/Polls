@@ -6,15 +6,19 @@
         <title>Page d'essai pour la traduction</title>
     </head>
     <body>
-        <h1>{% translate "Traduction"%} :</h1>
         {% get_current_language as LANGUAGE_CODE %}
         <h1>Paramètre langue actuellement actif : {{ LANGUAGE_CODE }}</h1>
+        <h1>{% translate "Page pour comprendre la mise en place de site multilingue avec Django"%}</h1>
         <p>{% blocktranslate %}Ceci est un paragraphe à traduire avec la variable : {{ static_string_1 }}{% endblocktranslate %}</p>
         <p>{{ second_paragraph }}</p>
         <ul>
             <li>{% translate static_string_1 %}</li>
             <li>{% translate static_string_2 %}</li>
             <li>{% translate "Troisième phrase statique à traduire" %}</li>
+            <li>{% translate "Clarté" context "lumière" %}</li>
+            <li>{% translate "Clarté" context "transparence" %}</li>
+            <li>{% translate "Clarté" context "intelligibilité" %}</li>
+            <li>{% translate "Clarté" context "blancheur" %}</li>
         </ul>
     </body>
 </html>

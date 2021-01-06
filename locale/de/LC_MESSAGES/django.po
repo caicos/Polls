@@ -20,66 +20,68 @@ msgstr ""
 
 #: mysite/settings.py:112
 msgid "Français"
-msgstr "French"
+msgstr "Französisch"
 
 #: mysite/settings.py:113
 msgid "Englais"
-msgstr "English"
+msgstr "Englisch"
 
 #: mysite/settings.py:114
 msgid "Allemand"
-msgstr "German"
+msgstr "Deutsch"
 
 #: polls/templates/polls/Page_essai_traduction.html:11
 msgid "Essayons de traduire ce texte"
-msgstr "Let's try to translate this text"
+msgstr "Versuchen wir, diesen text zu übersetzen"
 
 #: polls/templates/polls/my_translate_template.html:11
 msgid "Page pour comprendre la mise en place de site multilingue avec Django"
-msgstr "Page to understand how to implement a multilingual site with Django"
+msgstr ""
+"Seite, um die implementierung einer mehrsprachigen Website mit Django zu "
+"verstehen"
 
 #: polls/templates/polls/my_translate_template.html:12
 #, python-format
 msgid ""
 "Ceci est un paragraphe à traduire avec la variable : %(static_string_1)s"
-msgstr "This is a paragraph to translate with a variable : %(static_string_1)s"
+msgstr "Das ist ein Paragraph mit der Variable : %(static_string_1)s"
 
 #: polls/templates/polls/my_translate_template.html:17
 msgid "Troisième phrase statique à traduire"
-msgstr "Third static string to translate"
+msgstr "Dritter statischer Satz zum übersetzen"
 
 #: polls/templates/polls/my_translate_template.html:18
 msgctxt "lumière"
 msgid "Clarté"
-msgstr "Lightness"
+msgstr "Klarheit"
 
 #: polls/templates/polls/my_translate_template.html:19
 msgctxt "transparence"
 msgid "Clarté"
-msgstr "transparency"
+msgstr "Helligkeit"
 
 #: polls/templates/polls/my_translate_template.html:20
 msgctxt "intelligibilité"
 msgid "Clarté"
-msgstr "intelligibility"
+msgstr "Verständlichkeit"
 
 #: polls/templates/polls/my_translate_template.html:21
 msgctxt "blancheur"
 msgid "Clarté"
-msgstr "whiteness"
+msgstr "Helligkeit"
 
 #: polls/views.py:53
 msgid "Première phrase statique à traduire"
-msgstr "First static string to translate"
+msgstr "Erster statischer Satz zum übersetzen"
 
 #: polls/views.py:54
 msgid "Seconde phrase statique à traduire"
-msgstr "Second static string to translate"
+msgstr "zweiter statischer Satz zum übersetzen"
 
 #: polls/views.py:55
 msgid "Ceci est le second paragraphe à traduire"
-msgstr "This is the second paragraph to translate"
+msgstr "Dies ist der zweiter Paragraph zuübersetzen"
 
 #: templates/admin/base_site.html:3
 msgid "Django site admin"
-msgstr "Django site admin"
+msgstr "Django Website Admin"
