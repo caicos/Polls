@@ -59,6 +59,13 @@ def mytranslateview(request):
     # En règle générale : Si vous devez appeler la fonction sur une chaîne à un moment où Django ne sait pas encore quelle langue utiliser, utilisez gettext_lazy(). La chaîne ne sera traduite qu’au dernier moment (au moment de son rendu).
 
 def matraduc(request):
+
+    from django.utils import translation
+    user_language = 'de'
+    translation.activate(user_language)
+    request.session[translation.LANGUAGE_SESSION_KEY] = user_language       # la session permet de rendre la langue persistante. La langue est déterminé dans la clef de session qui est sur l'ordinateur local (en tant que cookie)
+
+
     context = {
         # 'static_string_1' : gettext_noop('Première phrase statique à traduire'),
         # 'static_string_2' : gettext_noop('Seconde phrase statique à traduire'),

@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+# ]
+#
+# urlpatterns += i18n_patterns(
+#     # Ces URLs auront comme chemin : /<language_code/ au début pour les différentes langues du site
+#     path('polls/', include('polls.urls')),
+# )
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
-
-urlpatterns += i18n_patterns(
-    # Ces URLs auront comme chemin : /<language_code/ au début pour les différentes langues du site
     path('polls/', include('polls.urls')),
-)
+]
