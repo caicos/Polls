@@ -61,14 +61,13 @@ def mytranslateview(request):
 def matraduc(request):
 
     from django.utils import translation
-    user_language = 'de'
-    translation.activate(user_language)
-    request.session[translation.LANGUAGE_SESSION_KEY] = user_language       # la session permet de rendre la langue persistante. La langue est déterminé dans la clef de session qui est sur l'ordinateur local (en tant que cookie)
+    # user_language = 'de'
+    # translation.activate(user_language)
+    # request.session[translation.LANGUAGE_SESSION_KEY] = user_language       # la session permet de rendre la langue persistante. La langue est déterminé dans la clef de session qui est sur l'ordinateur local (en tant que cookie)
 
+    if translation.LANGUAGE_SESSION_KEY in request.session:
+        del request.session[translation.LANGUAGE_SESSION_KEY]               # Le dernier endroit où le langueageMiddleware regarde pour la langue est: La langue est maintenant déterminé par la langue sélectionnée dans le navigateur (ici 'fr')
+# Django regarde en premier s'il y a un pattern i18n dans l'URL, puis, s'il y a une session key, ou un cookie et en dernier reccours dans le http headre envoyé par le browser et si aucun n'est renseigné alors c'est la paramètre par défaut défini dans Django ===>> LANGUAGE_CODE = 'fr' dans les settings
 
-    context = {
-        # 'static_string_1' : gettext_noop('Première phrase statique à traduire'),
-        # 'static_string_2' : gettext_noop('Seconde phrase statique à traduire'),
-        # 'second_paragraph' : _('Ceci est le second paragraphe à traduire'),      # la traduction s'effectue directement dans le code python
-    }
+    context = {}
     return render(request, 'polls/Page_essai_traduction.html', context)
