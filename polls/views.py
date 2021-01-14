@@ -59,15 +59,6 @@ def mytranslateview(request):
     # En règle générale : Si vous devez appeler la fonction sur une chaîne à un moment où Django ne sait pas encore quelle langue utiliser, utilisez gettext_lazy(). La chaîne ne sera traduite qu’au dernier moment (au moment de son rendu).
 
 def matraduc(request):
-
-    from django.utils import translation
-    # user_language = 'de'
-    # translation.activate(user_language)
-    # request.session[translation.LANGUAGE_SESSION_KEY] = user_language       # la session permet de rendre la langue persistante. La langue est déterminé dans la clef de session qui est sur l'ordinateur local (en tant que cookie)
-
-    if translation.LANGUAGE_SESSION_KEY in request.session:
-        del request.session[translation.LANGUAGE_SESSION_KEY]               # Le dernier endroit où le langueageMiddleware regarde pour la langue est: La langue est maintenant déterminé par la langue sélectionnée dans le navigateur (ici 'fr')
-# Django regarde en premier s'il y a un pattern i18n dans l'URL, puis, s'il y a une session key, ou un cookie et en dernier reccours dans le http headre envoyé par le browser et si aucun n'est renseigné alors c'est la paramètre par défaut défini dans Django ===>> LANGUAGE_CODE = 'fr' dans les settings
-
-    context = {}
+    title = _('Homepage - Sélection de la langue')
+    context = {'title': title,}
     return render(request, 'polls/Page_essai_traduction.html', context)

@@ -25,8 +25,10 @@ from django.urls import path, include
 #     # Ces URLs auront comme chemin : /<language_code/ au début pour les différentes langues du site
 #     path('polls/', include('polls.urls')),
 # )
+# §: La vue de redirection set_language de la page https://docs.djangoproject.com/fr/3.1/topics/i18n/translation/
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
 ]
