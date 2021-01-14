@@ -59,6 +59,6 @@ def mytranslateview(request):
     # En règle générale : Si vous devez appeler la fonction sur une chaîne à un moment où Django ne sait pas encore quelle langue utiliser, utilisez gettext_lazy(). La chaîne ne sera traduite qu’au dernier moment (au moment de son rendu).
 
 def matraduc(request):
-    title = _('Homepage - Sélection de la langue')
+    title = _("Page d'accueil - Sélection de la langue")
     context = {'title': title,}
     return render(request, 'polls/Page_essai_traduction.html', context)
