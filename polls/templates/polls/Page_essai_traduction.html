@@ -7,6 +7,8 @@
     </head>
     <body>
         <h1>{{ title }}</h1>
+        <br/>
+        <h2>Bouton pour sélectionner la langue pour le site</h2>
         <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}">
             <select name="language" id="">
@@ -21,9 +23,12 @@
             </select>
             <input type="submit" value="Go">
         </form>
-
+        <br/>
         <!-- si on veut afficher la langue utilisée mais pas la sélection de la langue, ne pas oublier de mettre ceci: {% get_current_language as LANGUAGE_CODE %} pour afficher la langue utilisée ci-dessous -->
         <h2>Paramètre langue actuellement actif : {{ LANGUAGE_CODE }}</h2>
-        <h1>{% translate "Essayons de traduire ce texte" %}</h1>
+        <h3>{% translate "Essayons de traduire ce texte" %}</h3>
+        <br/>
+        <h2>Il est aussi possible de traduire les liens des URLs:</h2>
+        <h3><a href="{% url 'polls:mytranslate' %}">{% url 'polls:mytranslate' %}</a></h3>
     </body>
 </html>
